@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 import { MainComponent } from './core/main/main.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
-
+import { TasksComponent } from './tasks/tasks.component';
 
 
 export const routes: Routes = [
@@ -21,6 +21,16 @@ export const routes: Routes = [
     component: UsuariosComponent,
     data: {
       title: 'Usuários',
+      icon: 'dashboard',
+      active: true
+    },
+
+  },
+  {
+    path: 'tasks',
+    component: TasksComponent,
+    data: {
+      title: 'Tasks',
       icon: 'dashboard',
       active: true
     },

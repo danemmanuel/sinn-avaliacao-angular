@@ -12,12 +12,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { UserService } from './shared/user/user.service';
 import { UsuariosComponent } from './usuarios/usuarios.component';
+import { TasksComponent } from './tasks/tasks.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     UsuariosComponent,
+    TasksComponent,
   ],
   imports: [
     BrowserModule,
