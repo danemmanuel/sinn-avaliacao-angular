@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { UserService } from './shared/user/user.service';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { TasksComponent } from './tasks/tasks.component';
+import { OrderModule } from 'ngx-order-pipe';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { TasksComponent } from './tasks/tasks.component';
     CoreModule,
     AppRoutingModule,
     HttpClientModule,
+    OrderModule,
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

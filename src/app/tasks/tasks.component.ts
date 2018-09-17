@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TasksService } from './tasks.service'
 import { Observable } from 'rxjs'
 
+
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',
@@ -10,6 +11,7 @@ import { Observable } from 'rxjs'
 })
 export class TasksComponent implements OnInit {
   tasks:any
+  order: string = 'id';
 
   constructor(private tasksService:TasksService) { }
 
