@@ -1,18 +1,35 @@
 <div class="container">
+  <button (click)="allTasks()">Todos</button>
+  <button (click)="openTasks()">Abertas</button>
+  <button (click)="closeTasks()">Finalizadas</button>
+
   <table>
     <thead>
       <tr>
+        <div class="content_data">
         <th>ID</th>
         <th>Name</th>
-
+        <th>Status</th>
+      </div>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let task of tasks | orderBy: order">
-        <td>{{ task.id }}</td>
-        <td>{{ task.title }}</td>
-       
+        <div class="content_data" *ngIf="task.completed == status || task.completed == status2" (click)="getInfoTask(task.id)">
+          <td>{{ task.id }}</td>
+          <td>{{ task.title }}</td>
+          <td>{{ task.completed }}</td>
+        </div>
       </tr>
     </tbody>
 </table>
+
+<div class="modal" (click)="closeModal()">
+  <div class="content">
+  <div class="id">ID: {{task.id}}</div>
+  <div class="task">Task: {{task.title}}</div>
+  <div class="task">Completada: {{task.completed}}</div>
+</div>
+</div>
+
 </div>

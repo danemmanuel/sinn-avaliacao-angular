@@ -8,10 +8,13 @@ export class TasksService {
   constructor(private http:  HttpClient) { }
 
   getTasks(){
-  let returner = this.http.get('https://jsonplaceholder.typicode.com/todos')
-  console.log(returner)
-  return returner
-   
+  return  this.http.get('https://jsonplaceholder.typicode.com/todos')
   }
+
+  getTask(id){
+    return  this.http.get('https://jsonplaceholder.typicode.com/todos/' + id)
+  }
+
+  
 
 }
